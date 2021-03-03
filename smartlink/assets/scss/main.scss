@@ -1,0 +1,84 @@
+@charset "UTF-8";
+
+/* ----------------------------------------------------------
+  Config
+---------------------------------------------------------- */
+
+$content_width_wide: 1260px;
+$content_width: 0px;
+
+/* Fonts
+-------------------------- */
+
+$font-main: 'Roboto', sans-serif;
+$font-second: 'Montserrat', sans-serif;
+$font-third: 'Droid Serif', serif;
+
+/* Basic colors
+-------------------------- */
+
+$color-main: #000;
+$color-hl: #2096f3;
+$color-fb: #3B5998;
+$color-twitter: #00ACED;
+$color-youtube: #CD201F;
+$color-gplus: #DD4B39;
+$color-linkedin: #0077B5;
+
+/* Breakpoints
+-------------------------- */
+
+$mobile-max: 767px;
+$tablet-min: 768px;
+$tablet-max: 1023px;
+$desktop-min: 1024px;
+$desktop-max: 1599px;
+$large-min: 1600px;
+
+$mobile_only: "max-width:"+$mobile-max;
+$mobile_excluded: "min-width:"+$tablet-min;
+$desktop_excluded: "max-width:"+$tablet-max;
+$desktop_only: "min-width:"+$desktop-min;
+$large_excluded: "max-width:"+$desktop-max;
+$large_only: "min-width:"+$large-min;
+
+/* ----------------------------------------------------------
+  Utilities
+---------------------------------------------------------- */
+
+@import "utilities/_plugins.scss";
+
+/* ----------------------------------------------------------
+  CSSCommon
+---------------------------------------------------------- */
+
+@import "csscommon/components/default";
+@import "csscommon/components/common";
+@import "csscommon/components/common/imagereplace";
+@import "csscommon/components/common/navtoggle";
+
+/* Buttons */
+
+@import "csscommon/components/buttons/core";
+
+/* Various */
+
+@import "csscommon/components/grid";
+@import "csscommon/components/layouts";
+@import "csscommon/components/mixins/common";
+
+/* ----------------------------------------------------------
+  Smartlink
+---------------------------------------------------------- */
+
+@import "smartlink/icons";
+@import "smartlink/fonts";
+@import "smartlink/forms";
+@import "smartlink/base";
+@import "smartlink/base/header";
+@import "smartlink/base/footer";
+@import "smartlink/home";
+@import "smartlink/post";
+@import "smartlink/gifs";
+
+

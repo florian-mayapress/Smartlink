@@ -1,0 +1,284 @@
+@charset "UTF-8";
+
+/* ----------------------------------------------------------
+  Slider
+---------------------------------------------------------- */
+
+/* Core
+-------------------------- */
+
+.dk-jsu-slider {
+    z-index: 0;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Wrapper */
+
+.dk-jsu-slider-wrapper {
+    z-index: 1;
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+/* Slides */
+
+.dk-jsu-slide {
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+}
+
+.dk-jsu-slider-wrapper .pagination,
+.dk-jsu-slider-wrapper .navigation * {
+    z-index: 3;
+    position: absolute;
+}
+
+/* Theme
+-------------------------- */
+
+.dk-jsu-slider-wrapper {
+    height: 200px;
+}
+
+.dk-jsu-slider {
+    overflow: hidden;
+}
+
+/* Navigation */
+
+.dk-jsu-slider-wrapper .navigation {
+    line-height: 16px;
+}
+
+.dk-jsu-slider-wrapper .navigation .prev,
+.dk-jsu-slider-wrapper .navigation .next {
+    top: 50%;
+    left: 10px;
+    height: 16px;
+    margin-top: -8px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.dk-jsu-slider-wrapper .navigation .next {
+    right: 10px;
+    left: auto;
+}
+
+/* Pagination */
+
+.slick-dots,
+.dk-jsu-slider-wrapper .pagination {
+    right: 30px;
+    bottom: 30px;
+    left: 30px;
+    text-align: center;
+    font-size: 20px;
+    line-height: 10px;
+}
+
+.slick-dots li {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.slick-dots li button,
+.dk-jsu-slider-wrapper .pagination span {
+    display: inline-block;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 8px;
+    height: 8px;
+    margin: 0 4px;
+    padding: 0;
+    border: 2px solid #FFF;
+    border-radius: 50%;
+    overflow: hidden;
+    text-indent: -99px;
+    vertical-align: middle;
+    background-color: transparent;
+    -webkit-transition: background 0.3s ease;
+    transition: background 0.3s ease;
+    cursor: pointer;
+}
+
+.slick-dots .slick-active button,
+.dk-jsu-slider-wrapper .pagination .current,
+.dk-jsu-slider-wrapper .pagination span:hover {
+    background-color: #fff;
+}
+
+/* ----------------------------------------------------------
+  Slick slider
+---------------------------------------------------------- */
+
+/* Slider */
+
+.slick-slider {
+    display: block;
+    position: relative;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    -ms-user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list {
+    display: block;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.slick-list:focus {
+    outline: none;
+}
+
+.slick-list.dragging {
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+.slick-track {
+    display: block;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.slick-track:before,
+.slick-track:after {
+    content: '';
+    display: table;
+}
+
+.slick-track:after {
+    clear: both;
+}
+
+.slick-loading .slick-track {
+    visibility: hidden;
+}
+
+.slick-slide {
+    display: none;
+    float: left;
+    height: 100%;
+    min-height: 1px;
+}
+
+[dir='rtl'] .slick-slide {
+    float: right;
+}
+
+.slick-slide img {
+    display: block;
+}
+
+.slick-slide.slick-loading img {
+    display: none;
+}
+
+.slick-slide.dragging img {
+    pointer-events: none;
+}
+
+.slick-initialized .slick-slide {
+    display: block;
+}
+
+.slick-loading .slick-slide {
+    visibility: hidden;
+}
+
+.slick-vertical .slick-slide {
+    display: block;
+    height: auto;
+    border: 1px solid transparent;
+}
+
+.slick-arrow.slick-hidden {
+    display: none;
+}
+
+/* ----------------------------------------------------------
+  Player
+---------------------------------------------------------- */
+
+.wpusv-embed-video {
+    z-index: 1;
+    position: relative;
+    height: 0;
+    padding-top: 56.25%;
+    margin-bottom: 1.7em;
+}
+
+.wpusv-embed-video-play,
+.wpusv-embed-video .cover,
+.wpusv-embed-video > iframe {
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+
+.wpusv-embed-video > iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.wpusv-embed-video .cover {
+    z-index: 3;
+    background: transparent no-repeat center center;
+    background-size: cover;
+}
+
+.wpusv-embed-video .cover:after {
+    @extend .absolute-cover;
+    content: '';
+    background-color: rgba(0,0,0,0.2);
+}
+
+.wpusv-embed-video-play {
+    @extend .is-video-thumb;
+}
+
+.wpusv-embed-video .wpusv-embed-video-play {
+    @extend .absolute-cover;
+}
+
+.wpusv-embed-video button.wpusv-embed-video-play {
+    z-index: 3;
+    width: 100%;
+    border: 0;
+    outline: 0;
+}

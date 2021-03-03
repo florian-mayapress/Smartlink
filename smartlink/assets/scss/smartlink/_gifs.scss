@@ -1,0 +1,142 @@
+@charset "UTF-8";
+
+/* ----------------------------------------------------------
+  Grid
+---------------------------------------------------------- */
+
+.gif-item,
+.gif-item--size {
+    width: 33.33%;
+}
+
+@media($mobile_only) {
+    .gif-item,
+    .gif-item--size {
+        width: 100%!important;
+    }
+}
+
+.gif-item {
+    z-index: 1;
+    position: relative;
+}
+
+.loop-gif {
+    z-index: 1;
+    position: relative;
+    height: 0;
+    padding-top: 105%;
+}
+
+.gif-item--wide {
+    width: 66.66%;
+}
+
+.gif-item--tall .loop-gif {
+    padding-top: 210%;
+}
+
+.gif-item--wide .loop-gif {
+    padding-top: 52.5%;
+}
+
+.gif-item--tall.gif-item--wide .loop-gif {
+    padding-top: 105%;
+}
+
+@media($mobile_only) {
+    .loop-gif {
+        height: auto!important;
+        padding-top: 0!important;
+    }
+}
+
+.loop-gif .content,
+.loop-gif .gif,
+.loop-gif__inside {
+    @extend .absolute-cover;
+}
+
+.loop-gif__inside {
+    margin: 15px;
+    overflow: hidden;
+}
+
+.loop-gif .gif {
+    background: transparent no-repeat bottom center;
+    background-size: 100% auto;
+}
+
+@media($mobile_excluded) {
+    .gif-item--wide .loop-gif .gif {
+        background-position: right center;
+        background-size: auto 100%;
+    }
+
+    .gif-item--wide .loop-gif .content {
+        padding-right: 40%;
+    }
+}
+
+@media($mobile_only) {
+    .loop-gif {
+        margin-bottom: 15px;
+    }
+
+    .loop-gif__inside {
+        position: relative;
+        height: 0;
+        margin: 0;
+        padding-top: 105%;
+    }
+
+    .loop-gif .content {
+        display: none;
+    }
+}
+
+/* Content */
+
+.loop-gif .content {
+    z-index: 2;
+    bottom: auto;
+    padding: 20px;
+}
+
+@media($large_only) {
+    .loop-gif .content {
+        padding: 30px;
+    }
+}
+
+@media($mobile_only) {
+    .loop-gif .content {
+        position: relative!important;
+        padding-bottom: 200px;
+    }
+}
+
+.loop-gif .content p {
+    margin: 0;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1.36;
+}
+
+.loop-gif .content p strong {
+    color: #fff;
+}
+
+.loop-gif .content p small {
+    font-size: 13px;
+}
+
+@media($mobile_only) {
+    .loop-gif .content p {
+        font-size: 16px;
+    }
+
+    .loop-gif .content p small {
+        font-size: 10px;
+    }
+}

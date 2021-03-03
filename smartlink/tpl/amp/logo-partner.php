@@ -1,0 +1,1 @@
+<a class="logo-partner" target="_blank" href="http://www.erdf.fr/"><amp-img layout="responsive" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/logo-enedis.png'; ?>" alt="ENEDIS - L'électricité en réseau" height="67.7px" width="150px"></amp-img></a>

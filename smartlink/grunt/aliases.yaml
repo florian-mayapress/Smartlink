@@ -1,0 +1,6 @@
+
+build:
+- 'svgmin'
+- 'webfont'
+- 'compass'
+- 'clean'

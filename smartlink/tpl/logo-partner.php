@@ -1,0 +1,1 @@
+<a class="logo-partner" target="_blank" href="http://www.erdf.fr/"><img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/logo-erdf.png'; ?>" alt="ERDF - L'électricité en réseau" /></a>

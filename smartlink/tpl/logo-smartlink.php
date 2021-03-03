@@ -1,0 +1,1 @@
+<a class="main-logo" href="<?php echo home_url(); ?>"><img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/smartlink_media.svg'; ?>" alt="<?php echo esc_attr(get_bloginfo('name')); ?>" /></a>
